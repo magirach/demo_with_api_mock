@@ -15,6 +15,11 @@
 		A12E468D24994735007AF234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12E468B24994735007AF234 /* LaunchScreen.storyboard */; };
 		A12E469824994735007AF234 /* last_fm_searchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E469724994735007AF234 /* last_fm_searchTests.swift */; };
 		A12E46A324994735007AF234 /* last_fm_searchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46A224994735007AF234 /* last_fm_searchUITests.swift */; };
+		A12E46B4249947C9007AF234 /* MGRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46B3249947C9007AF234 /* MGRouter.swift */; };
+		A12E46B6249947EB007AF234 /* MGSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46B5249947EB007AF234 /* MGSessionProtocol.swift */; };
+		A12E46B824994827007AF234 /* MGSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46B724994827007AF234 /* MGSession.swift */; };
+		A12E46BB24994954007AF234 /* MGRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46BA24994954007AF234 /* MGRouterInput.swift */; };
+		A12E46BE24994C67007AF234 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46BD24994C67007AF234 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		A12E469E24994735007AF234 /* last_fm_searchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = last_fm_searchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12E46A224994735007AF234 /* last_fm_searchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = last_fm_searchUITests.swift; sourceTree = "<group>"; };
 		A12E46A424994735007AF234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A12E46B3249947C9007AF234 /* MGRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRouter.swift; sourceTree = "<group>"; };
+		A12E46B5249947EB007AF234 /* MGSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGSessionProtocol.swift; sourceTree = "<group>"; };
+		A12E46B724994827007AF234 /* MGSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGSession.swift; sourceTree = "<group>"; };
+		A12E46BA24994954007AF234 /* MGRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRouterInput.swift; sourceTree = "<group>"; };
+		A12E46BD24994C67007AF234 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,8 @@
 		A12E467F24994732007AF234 /* last_fm_search */ = {
 			isa = PBXGroup;
 			children = (
+				A12E46BC24994C5C007AF234 /* Helpers */,
+				A12E46B024994784007AF234 /* Router */,
 				A12E468024994732007AF234 /* AppDelegate.swift */,
 				A12E468224994732007AF234 /* SceneDelegate.swift */,
 				A12E468424994732007AF234 /* ViewController.swift */,
@@ -126,6 +138,33 @@
 				A12E46A424994735007AF234 /* Info.plist */,
 			);
 			path = last_fm_searchUITests;
+			sourceTree = "<group>";
+		};
+		A12E46B024994784007AF234 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A12E46B92499494A007AF234 /* Input */,
+				A12E46B3249947C9007AF234 /* MGRouter.swift */,
+				A12E46B5249947EB007AF234 /* MGSessionProtocol.swift */,
+				A12E46B724994827007AF234 /* MGSession.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A12E46B92499494A007AF234 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				A12E46BA24994954007AF234 /* MGRouterInput.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		A12E46BC24994C5C007AF234 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A12E46BD24994C67007AF234 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12E46B4249947C9007AF234 /* MGRouter.swift in Sources */,
 				A12E468524994732007AF234 /* ViewController.swift in Sources */,
+				A12E46BB24994954007AF234 /* MGRouterInput.swift in Sources */,
+				A12E46B824994827007AF234 /* MGSession.swift in Sources */,
+				A12E46B6249947EB007AF234 /* MGSessionProtocol.swift in Sources */,
 				A12E468124994732007AF234 /* AppDelegate.swift in Sources */,
 				A12E468324994732007AF234 /* SceneDelegate.swift in Sources */,
+				A12E46BE24994C67007AF234 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "magirach.last-fm-search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,7 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "magirach.last-fm-search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
