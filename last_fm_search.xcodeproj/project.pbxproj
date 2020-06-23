@@ -20,6 +20,10 @@
 		A12E46B824994827007AF234 /* MGSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46B724994827007AF234 /* MGSession.swift */; };
 		A12E46BB24994954007AF234 /* MGRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46BA24994954007AF234 /* MGRouterInput.swift */; };
 		A12E46BE24994C67007AF234 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E46BD24994C67007AF234 /* Constants.swift */; };
+		A141D72624A1826A00DE1631 /* MGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72524A1826A00DE1631 /* MGImageView.swift */; };
+		A141D72924A1919F00DE1631 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72824A1919F00DE1631 /* Album.swift */; };
+		A141D72C24A191D000DE1631 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72B24A191D000DE1631 /* AlbumTableViewCell.swift */; };
+		A141D72E24A1974800DE1631 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		A12E46B724994827007AF234 /* MGSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGSession.swift; sourceTree = "<group>"; };
 		A12E46BA24994954007AF234 /* MGRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRouterInput.swift; sourceTree = "<group>"; };
 		A12E46BD24994C67007AF234 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A141D72524A1826A00DE1631 /* MGImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGImageView.swift; sourceTree = "<group>"; };
+		A141D72824A1919F00DE1631 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A141D72B24A191D000DE1631 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,8 @@
 		A12E467F24994732007AF234 /* last_fm_search */ = {
 			isa = PBXGroup;
 			children = (
+				A141D72A24A191B100DE1631 /* Cells */,
+				A141D72724A1919200DE1631 /* Model */,
 				A12E46BC24994C5C007AF234 /* Helpers */,
 				A12E46B024994784007AF234 /* Router */,
 				A12E468024994732007AF234 /* AppDelegate.swift */,
@@ -163,8 +173,26 @@
 			isa = PBXGroup;
 			children = (
 				A12E46BD24994C67007AF234 /* Constants.swift */,
+				A141D72524A1826A00DE1631 /* MGImageView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A141D72724A1919200DE1631 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A141D72824A1919F00DE1631 /* Album.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A141D72A24A191B100DE1631 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A141D72B24A191D000DE1631 /* AlbumTableViewCell.swift */,
+				A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,11 +329,15 @@
 				A12E46B4249947C9007AF234 /* MGRouter.swift in Sources */,
 				A12E468524994732007AF234 /* ViewController.swift in Sources */,
 				A12E46BB24994954007AF234 /* MGRouterInput.swift in Sources */,
+				A141D72C24A191D000DE1631 /* AlbumTableViewCell.swift in Sources */,
+				A141D72624A1826A00DE1631 /* MGImageView.swift in Sources */,
 				A12E46B824994827007AF234 /* MGSession.swift in Sources */,
 				A12E46B6249947EB007AF234 /* MGSessionProtocol.swift in Sources */,
+				A141D72E24A1974800DE1631 /* TrackTableViewCell.swift in Sources */,
 				A12E468124994732007AF234 /* AppDelegate.swift in Sources */,
 				A12E468324994732007AF234 /* SceneDelegate.swift in Sources */,
 				A12E46BE24994C67007AF234 /* Constants.swift in Sources */,
+				A141D72924A1919F00DE1631 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

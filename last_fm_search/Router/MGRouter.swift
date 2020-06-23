@@ -43,7 +43,7 @@ public struct MGRouter {
     
     /// final url
     var url: URL {
-        let strUrl = String(format: "%@/%@", baseUrl, input.endpoint)
+        let strUrl = String(format: "%@%@", baseUrl, input.endpoint)
         return URL(string: strUrl)!
     }
     
@@ -91,6 +91,7 @@ extension MGRouter {
                     let error = NSError(domain: "com.moin.error", code: responseStatusCode, userInfo: ["description": "Empty response"])
                     callback(.failure(error))
                 }
+                return
             }
             if MGRouter.debug {
                 print("=================\nREQUEST\n=================")

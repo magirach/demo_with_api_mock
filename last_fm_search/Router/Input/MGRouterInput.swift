@@ -30,7 +30,7 @@ public protocol DataConvertable {
 
 public class MGRouterInput: MGRouterInputProtocol {
     
-    public var host: String = ""
+    public var host: String = Constants.host
     
     /// api endpoint
     public var endpoint: String
@@ -88,7 +88,7 @@ class MGRouterGetAlbumInput: MGRouterInput {
     init(urlParams: [String: Any]) {
         var params = urlParams
         params["method"] = Constants.methodGetAlbum
-        params["formate"] = Constants.responseForamte
+        params["format"] = Constants.responseForamte
         params["api_key"] = Constants.APIKey
         super.init( endpoint: "", urlParams: params)
     }
