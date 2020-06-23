@@ -42,23 +42,17 @@ extension UIImage {
 class MGImageView: UIImageView {
     
     private let loader: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView()
+        let indicator = UIActivityIndicatorView(style: .large)
         indicator.translatesAutoresizingMaskIntoConstraints = false
+        indicator.startAnimating()
         indicator.hidesWhenStopped = true
         indicator.color = .lightGray
         return indicator
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    override init(image: UIImage?) {
-        super.init(image: image)
-    }
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setup()
     }
     
     private func setup() {

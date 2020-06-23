@@ -10,6 +10,12 @@ import UIKit
 
 class TrackTableViewCell: UITableViewCell {
 
+    var track: Track?
+    
+    @IBOutlet weak var lblTrackName: UILabel!
+    @IBOutlet weak var lblArtistName: UILabel!
+    @IBOutlet weak var lblDuration: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +25,15 @@ class TrackTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    /// load track data to cell
+    /// - Parameter track: track object
+    func loadData(track: Track) {
+        self.track = track
+        lblTrackName.text = track.name
+        lblArtistName.text = track.artist.name
+        lblDuration.text = track.formatedDuration
     }
 
 }

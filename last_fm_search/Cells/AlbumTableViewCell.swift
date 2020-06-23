@@ -26,6 +26,8 @@ class AlbumTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    /// loead album data to cell
+    /// - Parameter data: album object
     func loadData(data: Album) {
         self.album = data
         imgAlbum.setImage(url: album.mediumImage)

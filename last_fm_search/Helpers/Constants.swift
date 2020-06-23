@@ -17,8 +17,12 @@ struct Constants {
         return "http://ws.audioscrobbler.com/2.0/"
     }
     
-    static var methodGetAlbum: String {
+    static var methodSearchAlbum: String {
         return "album.search"
+    }
+    
+    static var methodGetAlbum: String {
+        return "album.getInfo"
     }
     
     static var responseForamte: String {

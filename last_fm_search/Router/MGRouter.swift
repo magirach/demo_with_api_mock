@@ -67,7 +67,9 @@ extension MGRouter {
             self.apiCall(callback: callback)
     }
     
-
+    
+    /// make network api calls
+    /// - Parameter callback: callback blocak
     internal func apiCall<T: Decodable>(callback: @escaping (Result<T?, Error>) -> Void) {
         MGRouter.task = MGRouter.session.session!.dataTask(with: request) { (data, response, error) in
             let responseStatusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
@@ -127,6 +129,10 @@ extension MGRouter {
         MGRouter.task?.resume()
     }
     
+    /// decode data to required output
+    /// - Parameters:
+    ///   - data: response data
+    ///   - callback: callback block after data conversion
     internal func decode<T: Decodable>(data: Data, callback: @escaping (Result<T?, Error>) -> Void) {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = MGRouter.decodingStratagy

@@ -47,20 +47,20 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-ni-Bal">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-ni-Bal">
                                 <rect key="frame" x="0.0" y="138" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AlbumTableViewCell" id="DWc-e1-Gbn" customClass="AlbumTableViewCell" customModule="last_fm_search" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AlbumTableViewCell" rowHeight="100" id="DWc-e1-Gbn" customClass="AlbumTableViewCell" customModule="last_fm_search" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DWc-e1-Gbn" id="OTd-jn-o7n">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Nb-xv-gzA" customClass="MGImageView" customModule="last_fm_search" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="10" width="80" height="80.5"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="20" y="10" width="80" height="80"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="ZrB-6I-G4O"/>
                                                         <constraint firstAttribute="width" constant="80" id="hgk-jb-1HN"/>
@@ -83,15 +83,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="1Nb-xv-gzA" firstAttribute="centerY" secondItem="OTd-jn-o7n" secondAttribute="centerY" id="4gs-P0-cQX"/>
                                                 <constraint firstAttribute="trailing" secondItem="4fg-2d-gaO" secondAttribute="trailing" constant="10" id="4me-WC-lEI"/>
                                                 <constraint firstAttribute="trailing" secondItem="nkc-m2-Y1d" secondAttribute="trailing" constant="10" id="5cy-q4-Icl"/>
                                                 <constraint firstItem="4fg-2d-gaO" firstAttribute="top" secondItem="1Nb-xv-gzA" secondAttribute="top" id="KUf-j7-U49"/>
                                                 <constraint firstItem="nkc-m2-Y1d" firstAttribute="leading" secondItem="1Nb-xv-gzA" secondAttribute="trailing" constant="20" id="XZr-7w-an0"/>
                                                 <constraint firstItem="4fg-2d-gaO" firstAttribute="leading" secondItem="1Nb-xv-gzA" secondAttribute="trailing" constant="20" id="ZVO-Fl-CV8"/>
-                                                <constraint firstAttribute="bottom" secondItem="1Nb-xv-gzA" secondAttribute="bottom" constant="10" id="kQn-7Z-moT"/>
                                                 <constraint firstItem="nkc-m2-Y1d" firstAttribute="top" secondItem="4fg-2d-gaO" secondAttribute="bottom" constant="5" id="kjl-nu-ZoA"/>
                                                 <constraint firstItem="1Nb-xv-gzA" firstAttribute="leading" secondItem="OTd-jn-o7n" secondAttribute="leading" constant="20" id="lPf-Ee-ipj"/>
-                                                <constraint firstItem="1Nb-xv-gzA" firstAttribute="top" secondItem="OTd-jn-o7n" secondAttribute="top" constant="10" id="reg-UN-Iyb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -133,15 +132,15 @@
             </objects>
             <point key="canvasLocation" x="488" y="21"/>
         </scene>
-        <!--View Controller-->
+        <!--Album Info View Controller-->
         <scene sceneID="cCL-79-U4t">
             <objects>
-                <viewController id="yyL-xE-v6b" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlbumInfoViewController" id="yyL-xE-v6b" customClass="AlbumInfoViewController" customModule="last_fm_search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4he-SD-tlf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-VR-JGF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-VR-JGF" customClass="MGImageView" customModule="last_fm_search" customModuleProvider="target">
                                 <rect key="frame" x="87" y="68" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Ms8-7P-G2V"/>
@@ -172,11 +171,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4g-f0-meG">
+                                <rect key="frame" x="20" y="443.5" width="394" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="agI-d9-Zjl"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4GD-9e-5mb">
-                                <rect key="frame" x="0.0" y="443.5" width="414" height="418.5"/>
+                                <rect key="frame" x="0.0" y="444" width="414" height="418"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="a6H-n2-hkw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackTableViewCell" id="a6H-n2-hkw" customClass="TrackTableViewCell" customModule="last_fm_search" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="59.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a6H-n2-hkw" id="m72-bR-gcG">
@@ -218,8 +224,17 @@
                                                 <constraint firstItem="hrw-jH-5V8" firstAttribute="leading" secondItem="m72-bR-gcG" secondAttribute="leading" constant="20" id="qoN-fP-Rkc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblArtistName" destination="hrw-jH-5V8" id="JkC-aA-Tpx"/>
+                                            <outlet property="lblDuration" destination="afh-dO-bBx" id="MhK-2m-5Sr"/>
+                                            <outlet property="lblTrackName" destination="Cmy-E2-gec" id="07W-yw-ugg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yyL-xE-v6b" id="Ydf-vB-qO4"/>
+                                    <outlet property="delegate" destination="yyL-xE-v6b" id="bzN-Wb-noi"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -229,22 +244,32 @@
                             <constraint firstItem="JKc-nH-Mlp" firstAttribute="leading" secondItem="q7l-Uf-KmS" secondAttribute="leading" constant="20" id="4df-28-S1l"/>
                             <constraint firstItem="4GD-9e-5mb" firstAttribute="leading" secondItem="q7l-Uf-KmS" secondAttribute="leading" id="AOf-bU-QwS"/>
                             <constraint firstItem="poW-xN-Nlk" firstAttribute="leading" secondItem="q7l-Uf-KmS" secondAttribute="leading" constant="20" id="Czc-3D-QPq"/>
-                            <constraint firstItem="4GD-9e-5mb" firstAttribute="top" secondItem="ETb-m3-fWv" secondAttribute="bottom" id="FSE-Ev-dMy"/>
                             <constraint firstItem="q7l-Uf-KmS" firstAttribute="bottom" secondItem="4GD-9e-5mb" secondAttribute="bottom" id="GcB-6h-hUR"/>
+                            <constraint firstItem="p4g-f0-meG" firstAttribute="leading" secondItem="q7l-Uf-KmS" secondAttribute="leading" constant="20" id="Hmf-sf-p2a"/>
                             <constraint firstItem="JKc-nH-Mlp" firstAttribute="top" secondItem="GsC-VR-JGF" secondAttribute="bottom" constant="20" id="W6X-AE-J3E"/>
                             <constraint firstItem="Gxf-nk-mo8" firstAttribute="top" secondItem="poW-xN-Nlk" secondAttribute="bottom" constant="10" id="Yaz-x8-675"/>
                             <constraint firstItem="ETb-m3-fWv" firstAttribute="leading" secondItem="q7l-Uf-KmS" secondAttribute="leading" constant="20" id="Zpk-Kv-S3e"/>
+                            <constraint firstItem="p4g-f0-meG" firstAttribute="top" secondItem="ETb-m3-fWv" secondAttribute="bottom" id="a0g-Kg-E9q"/>
                             <constraint firstItem="ETb-m3-fWv" firstAttribute="top" secondItem="Gxf-nk-mo8" secondAttribute="bottom" constant="10" id="bK3-z2-248"/>
                             <constraint firstItem="q7l-Uf-KmS" firstAttribute="trailing" secondItem="ETb-m3-fWv" secondAttribute="trailing" constant="20" id="f2C-If-Lib"/>
                             <constraint firstItem="q7l-Uf-KmS" firstAttribute="trailing" secondItem="poW-xN-Nlk" secondAttribute="trailing" constant="20" id="i0i-Z3-D1B"/>
                             <constraint firstItem="q7l-Uf-KmS" firstAttribute="trailing" secondItem="Gxf-nk-mo8" secondAttribute="trailing" constant="20" id="nGf-GB-QiZ"/>
+                            <constraint firstItem="4GD-9e-5mb" firstAttribute="top" secondItem="p4g-f0-meG" secondAttribute="bottom" id="oKk-xI-CTM"/>
                             <constraint firstItem="GsC-VR-JGF" firstAttribute="top" secondItem="q7l-Uf-KmS" secondAttribute="top" constant="24" id="q63-3E-Qxi"/>
                             <constraint firstItem="q7l-Uf-KmS" firstAttribute="trailing" secondItem="4GD-9e-5mb" secondAttribute="trailing" id="qs2-vz-Wvb"/>
                             <constraint firstItem="poW-xN-Nlk" firstAttribute="top" secondItem="JKc-nH-Mlp" secondAttribute="bottom" constant="5" id="uZd-SL-9no"/>
                             <constraint firstItem="Gxf-nk-mo8" firstAttribute="leading" secondItem="q7l-Uf-KmS" secondAttribute="leading" constant="20" id="yx9-yS-kt5"/>
+                            <constraint firstItem="q7l-Uf-KmS" firstAttribute="trailing" secondItem="p4g-f0-meG" secondAttribute="trailing" id="zYg-Wc-bKk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q7l-Uf-KmS"/>
                     </view>
+                    <connections>
+                        <outlet property="imgAlbum" destination="GsC-VR-JGF" id="Eoo-ah-vIy"/>
+                        <outlet property="lblArtistName" destination="poW-xN-Nlk" id="SWj-f9-wad"/>
+                        <outlet property="lblName" destination="JKc-nH-Mlp" id="kfl-cd-K0d"/>
+                        <outlet property="lblSortDesc" destination="Gxf-nk-mo8" id="x9g-hh-kO9"/>
+                        <outlet property="tblTracks" destination="4GD-9e-5mb" id="dQ7-8F-bie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkO-l2-vbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

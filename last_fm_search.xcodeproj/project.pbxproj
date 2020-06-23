@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A12E468124994732007AF234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E468024994732007AF234 /* AppDelegate.swift */; };
 		A12E468324994732007AF234 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E468224994732007AF234 /* SceneDelegate.swift */; };
-		A12E468524994732007AF234 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E468424994732007AF234 /* ViewController.swift */; };
+		A12E468524994732007AF234 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E468424994732007AF234 /* AlbumsViewController.swift */; };
 		A12E468824994732007AF234 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12E468624994732007AF234 /* Main.storyboard */; };
 		A12E468A24994735007AF234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12E468924994735007AF234 /* Assets.xcassets */; };
 		A12E468D24994735007AF234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12E468B24994735007AF234 /* LaunchScreen.storyboard */; };
@@ -24,6 +24,8 @@
 		A141D72924A1919F00DE1631 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72824A1919F00DE1631 /* Album.swift */; };
 		A141D72C24A191D000DE1631 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72B24A191D000DE1631 /* AlbumTableViewCell.swift */; };
 		A141D72E24A1974800DE1631 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */; };
+		A141D73224A198D200DE1631 /* AlbumInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D73124A198D200DE1631 /* AlbumInfoViewController.swift */; };
+		A141D73424A1A09A00DE1631 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D73324A1A09A00DE1631 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +49,7 @@
 		A12E467D24994732007AF234 /* last_fm_search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = last_fm_search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12E468024994732007AF234 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A12E468224994732007AF234 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A12E468424994732007AF234 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A12E468424994732007AF234 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		A12E468724994732007AF234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A12E468924994735007AF234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A12E468C24994735007AF234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		A141D72824A1919F00DE1631 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A141D72B24A191D000DE1631 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		A141D73124A198D200DE1631 /* AlbumInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoViewController.swift; sourceTree = "<group>"; };
+		A141D73324A1A09A00DE1631 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,17 +121,13 @@
 		A12E467F24994732007AF234 /* last_fm_search */ = {
 			isa = PBXGroup;
 			children = (
+				A141D73524A1A35D00DE1631 /* Resources */,
+				A141D73024A198B000DE1631 /* Delegates */,
+				A141D72F24A198A400DE1631 /* Controllers */,
 				A141D72A24A191B100DE1631 /* Cells */,
 				A141D72724A1919200DE1631 /* Model */,
 				A12E46BC24994C5C007AF234 /* Helpers */,
 				A12E46B024994784007AF234 /* Router */,
-				A12E468024994732007AF234 /* AppDelegate.swift */,
-				A12E468224994732007AF234 /* SceneDelegate.swift */,
-				A12E468424994732007AF234 /* ViewController.swift */,
-				A12E468624994732007AF234 /* Main.storyboard */,
-				A12E468924994735007AF234 /* Assets.xcassets */,
-				A12E468B24994735007AF234 /* LaunchScreen.storyboard */,
-				A12E468E24994735007AF234 /* Info.plist */,
 			);
 			path = last_fm_search;
 			sourceTree = "<group>";
@@ -193,6 +193,36 @@
 				A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A141D72F24A198A400DE1631 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A12E468424994732007AF234 /* AlbumsViewController.swift */,
+				A141D73124A198D200DE1631 /* AlbumInfoViewController.swift */,
+				A141D73324A1A09A00DE1631 /* BaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A141D73024A198B000DE1631 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				A12E468024994732007AF234 /* AppDelegate.swift */,
+				A12E468224994732007AF234 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		A141D73524A1A35D00DE1631 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A12E468624994732007AF234 /* Main.storyboard */,
+				A12E468924994735007AF234 /* Assets.xcassets */,
+				A12E468B24994735007AF234 /* LaunchScreen.storyboard */,
+				A12E468E24994735007AF234 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +357,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A12E46B4249947C9007AF234 /* MGRouter.swift in Sources */,
-				A12E468524994732007AF234 /* ViewController.swift in Sources */,
+				A12E468524994732007AF234 /* AlbumsViewController.swift in Sources */,
 				A12E46BB24994954007AF234 /* MGRouterInput.swift in Sources */,
 				A141D72C24A191D000DE1631 /* AlbumTableViewCell.swift in Sources */,
+				A141D73224A198D200DE1631 /* AlbumInfoViewController.swift in Sources */,
+				A141D73424A1A09A00DE1631 /* BaseViewController.swift in Sources */,
 				A141D72624A1826A00DE1631 /* MGImageView.swift in Sources */,
 				A12E46B824994827007AF234 /* MGSession.swift in Sources */,
 				A12E46B6249947EB007AF234 /* MGSessionProtocol.swift in Sources */,
@@ -512,7 +544,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JYBAFA78GD;
-				INFOPLIST_FILE = last_fm_search/Info.plist;
+				INFOPLIST_FILE = last_fm_search/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JYBAFA78GD;
-				INFOPLIST_FILE = last_fm_search/Info.plist;
+				INFOPLIST_FILE = last_fm_search/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -84,6 +84,16 @@ public class MGRouterInput: MGRouterInputProtocol {
     }
 }
 
+class MGRouterSearchAlbumsInput: MGRouterInput {
+    init(urlParams: [String: Any]) {
+        var params = urlParams
+        params["method"] = Constants.methodSearchAlbum
+        params["format"] = Constants.responseForamte
+        params["api_key"] = Constants.APIKey
+        super.init( endpoint: "", urlParams: params)
+    }
+}
+
 class MGRouterGetAlbumInput: MGRouterInput {
     init(urlParams: [String: Any]) {
         var params = urlParams
