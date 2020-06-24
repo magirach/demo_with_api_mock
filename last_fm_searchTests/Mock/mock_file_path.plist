@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>last_fm_search.MGRouterSearchAlbumsInput</key>
+	<dict>
+		<key>pick</key>
+		<string>success_default</string>
+		<key>success</key>
+		<dict>
+			<key>default</key>
+			<string>albums</string>
+		</dict>
+		<key>failure</key>
+		<dict>
+			<key>default</key>
+			<string>fail_albums</string>
+		</dict>
+	</dict>
+	<key>last_fm_search.MGRouterGetAlbumInput</key>
+	<dict>
+		<key>pick</key>
+		<string>success_default</string>
+		<key>success</key>
+		<dict>
+			<key>default</key>
+			<string>album</string>
+		</dict>
+		<key>failure</key>
+		<dict>
+			<key>default</key>
+			<string>fail_album</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

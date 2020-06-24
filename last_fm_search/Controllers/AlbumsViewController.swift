@@ -15,8 +15,10 @@ class AlbumsViewController: BaseViewController {
     
     var arrAlbums = [Album]() {
         didSet {
-            tblAlbum.reloadData()
-            tblAlbum.isHidden = false
+            if isViewLoaded && (self.storyboard != nil) {
+                tblAlbum.reloadData()
+                tblAlbum.isHidden = false
+            }
         }
     }
     

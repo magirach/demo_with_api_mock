@@ -26,6 +26,11 @@
 		A141D72E24A1974800DE1631 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */; };
 		A141D73224A198D200DE1631 /* AlbumInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D73124A198D200DE1631 /* AlbumInfoViewController.swift */; };
 		A141D73424A1A09A00DE1631 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D73324A1A09A00DE1631 /* BaseViewController.swift */; };
+		A141D73724A2D17500DE1631 /* MGMockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D73624A2D17400DE1631 /* MGMockSession.swift */; };
+		A141D73A24A2D20400DE1631 /* MockConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141D73924A2D20400DE1631 /* MockConfiguration.swift */; };
+		A141D73C24A2D22800DE1631 /* mock_file_path.plist in Resources */ = {isa = PBXBuildFile; fileRef = A141D73B24A2D22800DE1631 /* mock_file_path.plist */; };
+		A141D73F24A2D2FD00DE1631 /* albums.json in Resources */ = {isa = PBXBuildFile; fileRef = A141D73E24A2D2FD00DE1631 /* albums.json */; };
+		A141D74224A2D35600DE1631 /* album.json in Resources */ = {isa = PBXBuildFile; fileRef = A141D74124A2D35600DE1631 /* album.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		A141D72D24A1974800DE1631 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		A141D73124A198D200DE1631 /* AlbumInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoViewController.swift; sourceTree = "<group>"; };
 		A141D73324A1A09A00DE1631 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A141D73624A2D17400DE1631 /* MGMockSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGMockSession.swift; sourceTree = "<group>"; };
+		A141D73924A2D20400DE1631 /* MockConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockConfiguration.swift; sourceTree = "<group>"; };
+		A141D73B24A2D22800DE1631 /* mock_file_path.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mock_file_path.plist; sourceTree = "<group>"; };
+		A141D73E24A2D2FD00DE1631 /* albums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
+		A141D74124A2D35600DE1631 /* album.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = album.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +145,8 @@
 		A12E469624994735007AF234 /* last_fm_searchTests */ = {
 			isa = PBXGroup;
 			children = (
+				A141D74024A2D31900DE1631 /* MockHelper */,
+				A141D73D24A2D23000DE1631 /* Mock */,
 				A12E469724994735007AF234 /* last_fm_searchTests.swift */,
 				A12E469924994735007AF234 /* Info.plist */,
 			);
@@ -223,6 +235,25 @@
 				A12E468E24994735007AF234 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A141D73D24A2D23000DE1631 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A141D73B24A2D22800DE1631 /* mock_file_path.plist */,
+				A141D73E24A2D2FD00DE1631 /* albums.json */,
+				A141D74124A2D35600DE1631 /* album.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		A141D74024A2D31900DE1631 /* MockHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A141D73924A2D20400DE1631 /* MockConfiguration.swift */,
+				A141D73624A2D17400DE1631 /* MGMockSession.swift */,
+			);
+			path = MockHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +370,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A141D73C24A2D22800DE1631 /* mock_file_path.plist in Resources */,
+				A141D74224A2D35600DE1631 /* album.json in Resources */,
+				A141D73F24A2D2FD00DE1631 /* albums.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +411,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A141D73A24A2D20400DE1631 /* MockConfiguration.swift in Sources */,
+				A141D73724A2D17500DE1631 /* MGMockSession.swift in Sources */,
 				A12E469824994735007AF234 /* last_fm_searchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

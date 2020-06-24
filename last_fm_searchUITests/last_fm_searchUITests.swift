@@ -25,19 +25,37 @@ class last_fm_searchUITests: XCTestCase {
 
     func testExample() throws {
         // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+       let app = XCUIApplication()
         app.launch()
-
+        app.searchFields.firstMatch.tap()
+        app.keyboards.buttons["Search"].tap()
+        app.searchFields.firstMatch.tap()
+        app.keyboards.keys["A"].tap()
+        app.keyboards.keys["a"].tap()
+        let table = app.tables.firstMatch
+        wait(element: table, type: "exist", duration: 5)
+        let albumNameExists = app.tables.cells.firstMatch.staticTexts["Wolfgang Amadeus Phoenix"].exists
+        XCTAssert(albumNameExists, "Albun does not exist")
+        let artistNameExist = app.tables.cells.firstMatch.staticTexts["Phoenix"].exists
+        XCTAssert(artistNameExist, "Artist does not exist")
+        table.cells.firstMatch.tap()
+        XCTAssert(albumNameExists, "Albun does not exist")
+        XCTAssert(artistNameExist, "Artist does not exist")
+        
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
+    
+    @discardableResult
+    func wait(element:XCUIElement, type: String, duration: Int) -> Bool {
+        let predicate = NSPredicate(format: "\(type) == true")
+        let expectation = XCTNSPredicateExpectation(predicate: predicate, object: element)
+        let result = XCTWaiter().wait(for: [expectation], timeout: TimeInterval(duration))
+        switch result {
+        case .completed:
+            return true
+        default:
+            return false
         }
     }
 }

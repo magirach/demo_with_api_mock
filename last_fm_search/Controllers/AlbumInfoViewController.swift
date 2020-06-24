@@ -20,7 +20,9 @@ class AlbumInfoViewController: BaseViewController {
     
     var album: Album? {
         didSet {
-            setData()
+            if isViewLoaded && (self.storyboard != nil){
+                setData()
+            }
         }
     }
     

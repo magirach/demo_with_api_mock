@@ -10,7 +10,7 @@ import Foundation
 
 public struct MGRouter {
     
-    static var debug = true
+    static var debug = false
     static let encodingStratagy = JSONEncoder.KeyEncodingStrategy.useDefaultKeys
     static let decodingStratagy = JSONDecoder.KeyDecodingStrategy.useDefaultKeys
 
